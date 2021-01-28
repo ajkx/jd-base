@@ -332,7 +332,7 @@ echo -e "--------------------------------------------------------------\n"
 ## Git_PullShell && Update_Cron
 VerConfSample=$(grep " Version: " ${FileConfSample} | perl -pe "s|.+v((\d+\.?){3})|\1|")
 [ -f ${FileConf} ] && VerConf=$(grep " Version: " ${FileConf} | perl -pe "s|.+v((\d+\.?){3})|\1|")
-if [ ${ExitStatusShell} -eq 0 ]
+if [[ ${ExitStatusShell} -eq 0 ]]
 then
   echo -e "\nshell脚本更新完成...\n"
   if [ -n "${JD_DIR}" ] && [ -d ${ConfigDir} ]; then

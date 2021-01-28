@@ -343,12 +343,9 @@ else
 fi
 
 ## 克隆或更新js脚本
-if [ ${ExitStatusShell} -eq 0 ]; then
-  echo -e "--------------------------------------------------------------\n"
   [ -f ${ScriptsDir}/package.json ] && PackageListOld=$(cat ${ScriptsDir}/package.json)
   [ -d ${ScriptsDir}/.git ] && Git_PullScripts || Git_CloneScripts
-  cp -f ${Scripts2Dir}/jd_*.js ${ScriptsDir}
-fi
+
 
 ## 执行各函数
 if [[ ${ExitStatusScripts} -eq 0 ]]
